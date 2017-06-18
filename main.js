@@ -1,7 +1,7 @@
 'use strict'
 
 let DEBUG = process.env.DEBUG
-let app = require('app')
+let {app} = require('electron')
 app.commandLine.appendSwitch('js-flags', '--expose_gc');
 
 /*
@@ -22,5 +22,5 @@ app.on('window-all-closed', function() {
 })
 
 app.on('ready', function() {
-  require('./js/start')()
+    require('./js/start')()
 })
