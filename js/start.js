@@ -4,19 +4,15 @@ module.exports = opener
 
 
 function opener() {
-  var remote;
 
   let DEBUG = 0
 
-  try {
-    remote = require('remote')
-  } catch (e) {
+   let {eScreen} = require('electron').remote;
 
-  }
 
   var r = remote ? remote.require : require
 
-  var atomScreen = r('screen')
+  var atomScreen = eS creen
   var size = atomScreen.getPrimaryDisplay().workAreaSize
   console.log(size)
 
